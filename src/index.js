@@ -41,7 +41,7 @@ root.render(
           <p>Perfect for your desktop, laptop, or even as a stylish way to keep track of time while you're multitasking. Set your timer, stay on schedule, and maybe even squeeze in a little extra fun while you're at it!</p>
           <p>Ready to know the time? It's always now - with our digital clock, you're never late.</p>
           <br></br>
-          <ul>Features
+          <ul><h5>Features</h5>
             <li>Seconds</li>
             <li>Minutes</li>
             <li>Hours</li>
