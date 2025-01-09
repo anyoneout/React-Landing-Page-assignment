@@ -1578,14 +1578,22 @@ __webpack_require__.r(__webpack_exports__);
 
 function Clock(props) {
   const src = props.src;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("video", {
+  const videoDivStyle = {
+    width: "100%",
+    maxWidth: "800px",
+    margin: "auto"
+  };
+  const localVidStyle = {
+    width: "100%",
+    height: "auto"
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    style: videoDivStyle
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("video", {
     src: src,
-    style: {
-      width: 600,
-      height: 600
-    },
+    style: localVidStyle,
     controls: true
-  }));
+  })));
 }
 
 /***/ }),
@@ -1608,12 +1616,12 @@ function handleSubmit(event = new Event()) {
   const userName = userInput[0];
   const userEmail = userInput[1];
   if (!userName.value & !userEmail.value) {
-    (0,_utils_output__WEBPACK_IMPORTED_MODULE_0__.output)("Please enter name and email.");
+    (0,_utils_output__WEBPACK_IMPORTED_MODULE_0__.output)("Please enter a name and email");
   } else if (!userName.value) {
-    (0,_utils_output__WEBPACK_IMPORTED_MODULE_0__.output)("Please enter name");
+    (0,_utils_output__WEBPACK_IMPORTED_MODULE_0__.output)("Please enter a name");
   } else if (!userEmail.value) {
-    (0,_utils_output__WEBPACK_IMPORTED_MODULE_0__.output)("Please enter email");
-  } else (0,_utils_output__WEBPACK_IMPORTED_MODULE_0__.output)(`Name: ${userName.value}<br> Email: ${userEmail.value}`);
+    (0,_utils_output__WEBPACK_IMPORTED_MODULE_0__.output)(`${userName.value}, please enter your email`);
+  } else (0,_utils_output__WEBPACK_IMPORTED_MODULE_0__.output)(`Thank you ${userName.value}.<br> You've been sent a 15% discount to: ${userEmail.value}.`);
   console.log("submitted");
 }
 
@@ -1738,8 +1746,8 @@ root.render(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElem
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
   className: "col-1"
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-  className: "col-3",
-  id: "spaceRow"
+  className: "col-2",
+  id: "spaceRow1"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h1", null, "A Clock"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("form", {
   onSubmit: _controllers_handleSubmit__WEBPACK_IMPORTED_MODULE_2__.handleSubmit
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("label", null, "Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("input", {
@@ -1758,8 +1766,11 @@ root.render(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElem
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_Clock__WEBPACK_IMPORTED_MODULE_3__.Clock, {
   src: "./assets/clock.mp4"
 })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-  className: "col-4"
-})))));
+  className: "col-1"
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  className: "col-3",
+  id: "spaceRow2"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h3", null, "\"Tick-Tock, Your Time Has Come!\""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", null, "Welcome to the future of timekeeping with our sleek and simple web-based digital clock! Whether you're counting down to a big event or just need to keep track of the hours our digital clock has got your back."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", null, "It's clear, it's reliable, and it's here to keep you punctual with zero fuss. No more squinting at tiny clocks or missing a meeting - this one's big, bold, and right in front of you. Plus, it's always on time, so you won't have to worry about those batteries running low!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", null, "Perfect for your desktop, laptop, or even as a stylish way to keep track of time while you're multitasking. Set your timer, stay on schedule, and maybe even squeeze in a little extra fun while you're at it!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", null, "Ready to know the time? It's always now - with our digital clock, you're never late."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("ul", null, "Features", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("li", null, "Seconds"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("li", null, "Minutes"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("li", null, "Hours")))))));
 })();
 
 /******/ })()

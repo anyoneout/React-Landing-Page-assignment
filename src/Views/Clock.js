@@ -2,9 +2,13 @@ import React from "react";
 
 export function Clock(props) {
   const src = props.src;
+  const videoDivStyle = { width: "100%", maxWidth: "800px", margin: "auto" };
+  const localVidStyle = { width: "100%", height: "auto" };
   return (
     <>
-      <video src={src} style={{ width: 600, height: 600 }} controls />
+      <div style={videoDivStyle}>
+        <video src={src} style={localVidStyle} controls />
+      </div >
     </>
   )
 }

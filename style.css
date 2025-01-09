@@ -12,8 +12,11 @@ body {
   width: 100vw;
 }
 
+li {
+  color: rgb(161, 161, 29);
+}
+
 .row {
-  border: 1px, solid, blue;
   width: 100vw;
 }
 
@@ -21,6 +24,11 @@ body {
   justify-content: center;
 }
 
-#spaceRow {
-  margin-top: 40px;
+#spaceRow1 {
+  margin-top: 60px;
+}
+
+#spaceRow2 {
+  margin-top: 60px;
+  margin-left: 30px;
 }/*# sourceMappingURL=style.css.map */

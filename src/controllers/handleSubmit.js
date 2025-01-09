@@ -7,13 +7,13 @@ export function handleSubmit(event = new Event()) {
   const userName = userInput[0];
   const userEmail = userInput[1];
   if (!userName.value & !userEmail.value) {
-    output("Please enter name and email.");
+    output("Please enter a name and email");
   } else if (!userName.value) {
-    output("Please enter name");
+    output("Please enter a name");
   } else if (!userEmail.value) {
-    output("Please enter email");
+    output(`${userName.value}, please enter your email`);
   } else
-    output(`Name: ${userName.value}<br> Email: ${userEmail.value}`);
+    output(`Thank you ${userName.value}.<br> You've been sent a 15% discount to: ${userEmail.value}.`);
 
   console.log("submitted");
 
