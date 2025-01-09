@@ -1,4 +1,3 @@
-
 import { output } from "../utils/output";
 
 export function handleSubmit(event = new Event()) {
