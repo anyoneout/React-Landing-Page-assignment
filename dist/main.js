@@ -1584,8 +1584,7 @@ function Clock(props) {
       width: 600,
       height: 600
     },
-    controls: true,
-    autoplay: true
+    controls: true
   }));
 }
 
